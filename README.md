@@ -21,6 +21,8 @@ This readme has the following structure:<br/>
 4.4. Normalization<br/>
 5. Reflection<br/>
 
+Youtube Link: [![Youtube link to lap around First track](https://img.youtube.com/vi/-9AMMkRuG9g/0.jpg)](https://www.youtube.com/watch?v=-9AMMkRuG9g)
+
 ## Approach
 This challenge was something I was looking forward to experiment with, especially because there was simulator provided that allowed easily to record the images and afterward run the code in the same environment.<br/>
 Finishing the traffic sign classifier I was impressed how well the convolutional networks worked and how simple it is to implement them if there is proper input data to work on.<br/>
