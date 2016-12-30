@@ -2,23 +2,23 @@
 ## by Guntis Valters
 
 This readme has the following structure:
-1. Overall approach
-2. Challenges
- - Input Data gathering
- - Number of various parameters
- - Track configuration
-3. Model network architechture
- - Why initial 3x1x1 convolution layer
- - Why VGG type network
- - Why stacking intermediate layers
- - Why Adam optimizer
- - Number or epochs
-4. Data preparation
- - Data cleanup
- - Camera selecion
- - Region selection and downsampling
- - Normalization
-6. Reflection
+1. Overall approach<br/>
+2. Challenges<br/>
+2.1. Input Data gathering<br/>
+2.2. Number of various parameters<br/>
+2.3. Track configuration<br/>
+3. Model network architechture<br/>
+3.1. Why initial 3x1x1 convolution layer<br/>
+3.2. Why VGG type network<br/>
+3.3. Why stacking intermediate layers<br/>
+3.4. Why Adam optimizer<br/>
+4.5. Number or epochs<br/>
+4. Data preparation<br/>
+4.1. Data cleanup<br/>
+4.2. Camera selecion<br/>
+4.3. Region selection and downsampling<br/>
+4.4. Normalization<br/>
+5. Reflection<br/>
 
 ## Overall approach
 This challenge was something I was looking forward to experiment with, especially because there was simulator provided that allowed easily to record the images and afterwards run the code on the same environment.<br/>
@@ -51,7 +51,8 @@ This turned out to be the biggest challenge all over the track, because model wa
 This became sign for the model to start overfitting. If model was run over more epochs, then it 'wanted' to drive more smoothly and forward and did not do so well on the sharp right curve. This was solved with more dropout layers and data cleanup.
 
 ## Model network architechture
-(img)
+![Model architechture](https://github.com/Valtgun/CarND_Behavioral_Cloning/blob/master/readme_img/model.png)
+Final Architechture was a result of iterative approach. Initially several models was tested and one of the best results was with the above model. Later 3rd convolution layer was added as well as intermediate connections to first fully connected layer.
 
 ### Why initial 3x1x1 convolution layer
 First layer of the network was 3x1x1 convolution that I used also on the traiffic sign classifier, in order for the model to be able to adjust parameters for the colorspace. As the conversion between various colorspaces, e.g. RGB to HSL is just multiplication of each channel to get the new color channel then this layer is added for the model to train such behavior if necessary.
