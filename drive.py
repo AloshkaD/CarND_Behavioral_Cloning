@@ -40,7 +40,7 @@ def telemetry(sid, data):
     # Normalize pixels to values from -1.0 to 1.0
     image_array = (image_array / 127.5) - 1.0
     transformed_image_array = image_array.reshape((1, 40, 160, 3))
-    steering_angle = float(model.predict(transformed_image_array, batch_size=1, verbose=1))
+    steering_angle = float(model.predict(transformed_image_array, batch_size=1, verbose=1))*1.25
     # Throttle updated to 0.5 to accelerate faster, it is possible to navigate track at full speed
     throttle = 0.5
     # END - Of updated lines
